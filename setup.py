@@ -1,14 +1,14 @@
 from distutils.core import setup
 setup(
     name='darkarp',
-    packages=['darkarp'],
-    version='1.0',
+    packages=['darkarp', 'malkit_modules'],
+    version='1.1',
     license='MIT',
     description='Collection of modules by darkArp',
     author='Mario Nascimento',
     author_email='marionascimento@itsec.bz',
     url='https://github.com/darkarp',
-    download_url='https://github.com/darkarp/darkarp/archive/v1.0.tar.gz',
+    download_url='https://github.com/darkarp/darkarp/archive/v1.1.tar.gz',
     keywords=['darkarp', 'encryption', 'malware'],
     install_requires=[],
     classifiers=[
