@@ -8,7 +8,7 @@ setup(
   author = 'Mario Nascimento',
   author_email = 'marionascimento@itsec.bz',
   url = 'https://github.com/darkarp',
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',
+  download_url = 'https://github.com/darkarp/darkarp/archive/v0.1.tar.gz',
   keywords = ['darkarp', 'encryption', 'malware'],
   install_requires=[],
   classifiers=[
