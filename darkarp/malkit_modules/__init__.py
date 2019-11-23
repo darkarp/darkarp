@@ -1,2 +1,2 @@
-import encrypt
-import identifiers
+import darkarp.malkit_modules.encrypt
+import darkarp.malkit_modules.identifiers
