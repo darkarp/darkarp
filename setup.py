@@ -2,15 +2,15 @@ from distutils.core import setup
 setup(
     name='darkarp',
     packages=['darkarp'],
-    version='0.6',
+    version='0.7',
     license='MIT',
     description='Collection of modules by darkArp',
     author='Mario Nascimento',
     author_email='marionascimento@itsec.bz',
     url='https://github.com/darkarp',
-    download_url='https://github.com/darkarp/darkarp/archive/v0.6.tar.gz',
+    download_url='https://github.com/darkarp/darkarp/archive/v0.7.tar.gz',
     keywords=['darkarp', 'encryption', 'malware'],
-    install_requires=[],
+    install_requires=['optparse'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
