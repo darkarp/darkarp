@@ -1,2 +1,2 @@
 def test_func():
-    print("test")
+    return("test")
