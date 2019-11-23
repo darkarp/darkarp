@@ -1,4 +1,4 @@
-from cryptmod import identifiers
+from darkarp.malkit_modules import identifiers
 from optparse import OptionParser
 
 def fully_decrypt(instance: identifiers.Malware = None, filename: str = None):
