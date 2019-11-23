@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
     name='darkarp',
     packages=['darkarp'],
-    version='0.5',
+    version='0.6',
     license='MIT',
     description='Collection of modules by darkArp',
     author='Mario Nascimento',
