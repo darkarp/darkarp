@@ -2,3 +2,6 @@
 setup.cfg
 setup.py
 darkarp\__init__.py
+darkarp/malkit_modules\__init__.py
+darkarp/malkit_modules\encrypt.py
+darkarp/malkit_modules\identifiers.py
