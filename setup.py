@@ -10,7 +10,7 @@ setup(
     url='https://github.com/darkarp',
     download_url='https://github.com/darkarp/darkarp/archive/v0.7.tar.gz',
     keywords=['darkarp', 'encryption', 'malware'],
-    install_requires=['optparse'],
+    install_requires=[],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
