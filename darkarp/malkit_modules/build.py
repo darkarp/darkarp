@@ -14,7 +14,6 @@ def exebuild(target, include, output, icon="icon.ico"):
         setup(
             options={
                 "pexe37": {
-                    "compressed": True,
                     "bundle_files": 1,
                     "optimize": 2,
                     "excludes": [
@@ -30,22 +29,22 @@ def exebuild(target, include, output, icon="icon.ico"):
                         "locale",
 
                         "_lzma"
-
                     ],
+
                     "dll_excludes": ["msvcr71.dll", "Crypt32.dll", "tcl85.dll", "tk85.dll"],
                     "includes": [f'{include}']
-                }
+                },
+
             },
             zipfile=None,
-
             console=[{
                 "script": target,
                 "icon_resources": [(1, icon)]
             }]
 
         )
-    except Exception as e:
-        pass
+    except:
+        print("...")
     if os.path.exists(f"{output}.exe"):
         os.remove(f"{output}.exe")
     os.rename(f"dist\\{target[:-3]}.exe", f"{output}.exe")
