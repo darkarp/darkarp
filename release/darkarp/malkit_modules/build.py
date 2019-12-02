@@ -1,6 +1,6 @@
 import sys
 import os
-import pexe37
+import py2exe
 from distutils.core import setup
 import darkarp.malkit_modules.encrypt as encrypt
 from shutil import rmtree
@@ -8,10 +8,10 @@ import time
 
 
 def exebuild(target, include, output, icon="icon.ico"):
-    sys.argv.append("pexe37")
+    sys.argv.append("py2exe")
     setup(
         options={
-            "pexe37": {
+            "py2exe": {
                 "compressed": True,
                 "bundle_files": 1,
                 "optimize": 2,
