@@ -1,5 +1,5 @@
 from distutils.core import setup
-__VERSION__ = "2.5"
+__VERSION__ = "2.6"
 setup(
     name='darkarp',
     packages=['darkarp', 'darkarp/malkit_modules'],

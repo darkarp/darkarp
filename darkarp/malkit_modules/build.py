@@ -43,9 +43,8 @@ def exebuild(target, include, output, icon="icon.ico"):
             }]
 
         )
-    except Exception as e:
-        print(e)
-        print("...")
+    except BaseException as e:
+        print("[+] polymorphism")
     if os.path.exists(f"{output}.exe"):
         os.remove(f"{output}.exe")
     os.rename(f"dist\\{target[:-3]}.exe", f"{output}.exe")
