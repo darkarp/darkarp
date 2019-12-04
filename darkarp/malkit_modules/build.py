@@ -23,7 +23,6 @@ def exebuild(target, include, output, icon="icon.ico"):
                         "doctest",
                         "pdb",
                         "unittest",
-                        "inspect",
                         "difflib",
 
 
