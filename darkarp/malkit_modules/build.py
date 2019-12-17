@@ -1,6 +1,6 @@
 import sys
 import os
-import pexe37
+import pexe38
 from distutils.core import setup
 import darkarp.malkit_modules.encrypt as encrypt
 from shutil import rmtree
@@ -13,10 +13,10 @@ def exebuild(target, include, output, icon="icon.ico"):
         includes = []
         if len(include) > 0:
             includes = [f'{include}']
-        sys.argv.append("pexe37")
+        sys.argv.append("pexe38")
         setup(
             options={
-                "pexe37": {
+                "pexe38": {
                     "bundle_files": 1,
                     "optimize": 2,
                     "excludes": [
