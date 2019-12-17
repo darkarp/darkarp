@@ -11,7 +11,7 @@ setup(
     url='https://github.com/darkarp',
     download_url=f'https://github.com/darkarp/darkarp/archive/v{__VERSION__}.tar.gz',
     keywords=['darkarp', 'encryption', 'malkit'],
-    install_requires=['pexe38'],
+    install_requires=['pexe37'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
