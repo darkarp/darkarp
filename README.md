@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Malware Analyst and Pentester</h1>
+<h1 align="center">Hi 👋, I'm a Malware Analyst and Pentester</h1>
 <h3 align="center">I make some public projects and educational content</h3>
 
 </br>
