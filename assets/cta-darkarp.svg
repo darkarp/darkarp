@@ -1,0 +1,76 @@
+<svg width="1200" height="170" viewBox="0 0 1200 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#020617"></stop>
+      <stop offset="100%" stop-color="#030A14"></stop>
+    </linearGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"></stop>
+      <stop offset="100%" stop-color="#111827"></stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-20%" width="130%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"></feDropShadow>
+    </filter>
+
+    <style>
+      .title { font: 800 20px 'Segoe UI', Arial, sans-serif; fill: #E5E7EB; letter-spacing: 0.8px; }
+      .subtitle { font: 600 14px 'JetBrains Mono', Consolas, monospace; fill: #CBD5E1; }
+      .buttonText { font: 800 16px 'Segoe UI', Arial, sans-serif; fill: #FFFFFF; letter-spacing: 0.8px; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="170" rx="20" fill="url(#bg)"></rect>
+
+  <!-- accent lines -->
+  <rect x="40" y="24" width="180" height="2" fill="#7F1D1D" fill-opacity="0.5"></rect>
+  <rect x="980" y="24" width="180" height="2" fill="#0EA5E9" fill-opacity="0.5"></rect>
+
+  <!-- cards -->
+  <g filter="url(#cardShadow)">
+    <rect x="50" y="34" width="340" height="102" rx="18" fill="url(#panel)" stroke="#1F2937"></rect>
+    <rect x="430" y="34" width="340" height="102" rx="18" fill="url(#panel)" stroke="#1F2937"></rect>
+    <rect x="810" y="34" width="340" height="102" rx="18" fill="url(#panel)" stroke="#1F2937"></rect>
+  </g>
+
+  <!-- glows -->
+  <rect x="62" y="42" width="316" height="10" rx="5" fill="#00C853" fill-opacity="0.10" filter="url(#softGlow)"></rect>
+  <rect x="442" y="42" width="316" height="10" rx="5" fill="#5865F2" fill-opacity="0.12" filter="url(#softGlow)"></rect>
+  <rect x="822" y="42" width="316" height="10" rx="5" fill="#38BDF8" fill-opacity="0.10" filter="url(#softGlow)"></rect>
+
+  <!-- card 1: Whitehat Security -->
+  <circle cx="88" cy="66" r="20" fill="#0B1220" stroke="#1F2937"></circle>
+  <image href="whitehat-security-logo.png" x="74" y="52" width="28" height="28" preserveAspectRatio="xMidYMid meet"></image>
+
+  <text x="116" y="62" class="title">WHITEHAT SECURITY</text>
+  <text x="116" y="82" class="subtitle">free cyber training • labs • tools</text>
+
+  <rect x="116" y="95" width="170" height="26" rx="8" fill="#00C853"></rect>
+  <text x="201" y="112" text-anchor="middle" class="buttonText" fill="#08110A">VISIT WEBSITE</text>
+
+  <!-- card 2: Discord -->
+  <circle cx="468" cy="66" r="20" fill="#0B1220" stroke="#1F2937"></circle>
+  <text x="468" y="72" text-anchor="middle" font-family="Segoe UI Symbol, Arial, sans-serif" font-size="18" fill="#FFFFFF">💬</text>
+
+  <text x="496" y="62" class="title">DISCORD COMMUNITY</text>
+  <text x="496" y="82" class="subtitle">discussion • updates • support</text>
+
+  <rect x="496" y="95" width="160" height="26" rx="8" fill="#5865F2"></rect>
+  <text x="576" y="112" text-anchor="middle" class="buttonText">JOIN DISCORD</text>
+
+  <!-- card 3: Email -->
+  <circle cx="848" cy="66" r="20" fill="#0B1220" stroke="#1F2937"></circle>
+  <text x="848" y="72" text-anchor="middle" font-family="Segoe UI Symbol, Arial, sans-serif" font-size="17" fill="#FFFFFF">✉</text>
+
+  <text x="876" y="62" class="title">DIRECT CONTACT</text>
+  <text x="876" y="82" class="subtitle">mario@whitehat-security.com</text>
+
+  <rect x="876" y="95" width="130" height="26" rx="8" fill="#334155"></rect>
+  <text x="941" y="112" text-anchor="middle" class="buttonText">SEND EMAIL</text>
+</svg>
