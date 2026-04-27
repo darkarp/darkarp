@@ -40,7 +40,7 @@
 
 I build public projects, security tooling, and educational cybersecurity material.
 
-Most of my work lives at the boundary between offense and defense: reverse engineering malware, breaking applications and infrastructure, building detections, automating security workflows, and turning attacker tradecraft into practical defensive engineering.
+Most of my work lives at the boundary between offense and defense: reverse engineering malware, breaking applications and infrastructure, building detections, automating security workflows, and turning my experience as an attacker into practical defensive engineering.
 
 ---
 
